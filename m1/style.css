@@ -1,0 +1,39 @@
+/*style.css*/
+
+.btm-tab{
+    padding: 15px 0 15px 0;
+}
+
+.example-content {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-top: 20%;
+    height: 100%;
+  }
+
+  .list-input-container{
+    display: flex;
+
+  }
+
+  .homecontainer{
+    margin-top: 20%;
+  }
+
+  div.top-tab{
+    display: flex;
+  
+    height: 100%;
+  }
+
+  #h-flex-row{
+    display: flex;
+    flex-direction: row !important;
+  }
+
+  #t-flex-row{
+    display: flex;
+    flex-direction: row !important;
+  }
+  
