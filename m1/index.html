@@ -3,192 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M1 - To do lIST PROTOTYPE</title>
+    <title>Document</title>
     <!--IONIC CDN-->
+    
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style>
-        
-      </style>
 
-<ion-menu type="overlay" content-id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">
-    <ion-menu-toggle>
-      <ion-button>Click to close the menu</ion-button>
-    </ion-menu-toggle>
-  </ion-content>
-</ion-menu>
+  <!-----------------  MENU STUFF  ------------------------->
+   
 
-
-
-      <!--start of tab content-->
-      <ion-tabs>
-
-
-        <!---------------------------HOME TAB!------------------------->
-
-
-        <ion-tab tab="home">
-           <ion-nav id="home-nav"></ion-nav>
-          <div id="home-page">
-     
-            
-      <!--home page content lol-->
-
-            <!--ion padding seems to add padding to page content-->
-            <ion-content class="ion-padding">
-
-              <h2>Add an Item</h2>
-
-                <!--input field-->
-              <div class="list-input-container">
-              <ion-input label="Outline input" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input> <ion-button>Save</ion-button>
-              </div>
-
-              <!--list-->
-
-              <ion-list>
-                <ion-checkbox label-placement="end">Label at the End</ion-checkbox>
-             </ion-list>
-                  
-                  
-            <ion-checkbox label-placement="end">Label at the End</ion-checkbox>
-                
-                </ion-item>
-              </ion-list>
-
-              
-
-            </ion-content>
-
-
-          </div>
-
-
-       
-         
-
-          <!--end of menu stuff-->
-
-          <!----ACTUAL HOME PAGE CONTENT BELOW---->
-          <div class="ion-page" id="main-content">
-             <ion-header>
-              <ion-toolbar>
-               
-                    <ion-menu-toggle>
-                      <ion-button><ion-icon name="menu"></ion-icon></ion-button>
-                    </ion-menu-toggle>
-    
-                <ion-title>Simple To Do Lists</ion-title>
-              </ion-toolbar>
-            </ion-header>
-
-
-            
-            
-          </div>
-
-          <!--lists tab-->
-        </ion-tab>
-
-
-        <!---------------------------LISTS TAB!------------------------->
-
-        <ion-tab tab="lists">
-          <ion-nav id="lists-nav"></ion-nav>
-          <div id="lists-page">
-
-              <!--HEADER SHOWN ON ALL PAGES-->
-            <ion-header>
-              <ion-toolbar>
-                  <!--toggle menu btn-->
-              <ion-menu-toggle>
-                <ion-button><ion-icon name="menu"></ion-icon></ion-button>
+  <!--pane that opens when you click the menu btn-->
+  <ion-menu content-id="main-content">
+        <ion-header>
+          <ion-toolbar color="tertiary">
+              <ion-menu-toggle slot="start">   
+                  <ion-menu-button></ion-menu-button>
               </ion-menu-toggle>
-              <!--toggle menu btn end-->
-                <ion-title>Simple To Do List</ion-title>
-              </ion-toolbar>
-            </ion-header>
-            <!--END OF HEADER-->
+            <ion-title>Menu Content</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">This is the menu content.</ion-content>
+      </ion-menu>
 
-            <ion-content>
-              <div class="example-content">Lists page</div>
-            </ion-content>
-          </div>
-        </ion-tab>
+      <!--default page when menu is closed-->
 
-
-         <!---------------------------SETTINGS TAB!------------------------->
-
-
-        <ion-tab tab="settings">
-          <ion-nav id="settings-nav"></ion-nav>
-          <div id="settings-page">
-          
-              <!--HEADER SHOWN ON ALL PAGES-->
-              <!-- <ion-header>
-                <ion-toolbar>
-                    <!--toggle menu btn-->
-                <ion-menu-toggle>
-                  <ion-button><ion-icon name="menu"></ion-icon></ion-button>
-                </ion-menu-toggle>
-                <!--toggle menu btn end-->
-                  <ion-title>Simple To Do List</ion-title>
-                </ion-toolbar>
-              </ion-header>
-              <!--END OF HEADER-->
-
-
-            <ion-content>
-              <div class="example-content">Settings content</div>
-            </ion-content>
-          </div>
-
-
-          <!--------BOTTOM OF SCREEN------->
-
-
-          <!--tab bar-->
-        </ion-tab>
-        <ion-tab-bar id="btm-tab" slot="bottom" color="primary"> <!--color = primary changes tab bar color-->
-          <ion-tab-button tab="home">
-            <ion-icon name="home-outline"></ion-icon>
-            Home
-          </ion-tab-button>
-          <ion-tab-button tab="lists">
-            <ion-icon name="list"></ion-icon>
-            Lists
-          </ion-tab-button>
-          <ion-tab-button tab="settings">
-            <ion-icon name="settings-outline"></ion-icon>
-            Settings
-          </ion-tab-button>
+      <div class="ion-page" id="main-content">
         
-        </ion-tab-bar>
+        <ion-header>
+          
+          <ion-toolbar color="primary">
+            
+            
+            <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            
+                
+                <ion-title>Menu</ion-title>
+           
+          
+          </ion-toolbar>
 
-      </ion-tabs> <!--end of tab content-->
+        </ion-header>
+
+        <!--PAGE CONTENT-->
+       
       
+          
+          <ion-tabs>
+
+            <!--TAB 1-------->
+            <ion-tab tab="home">
+              <ion-nav id="home-nav"></ion-nav>
+              <div id="home-page">
+            
+                <ion-content class="ion-padding">
+                  <div class="homecontainer">
+
+                    <h2>Add an Item</h2>
+      
+                      <!--input field-->
+                    <div class="list-input-container">
+                    <ion-input label="Enter task, eg: Buy eggs" label-placement="floating" fill="outline" placeholder="Type task here"></ion-input> 
+                    <ion-button id="open-toast">Save</ion-button>
+                    <ion-toast 
+                      trigger="open-toast" 
+                      message="Item successfully added!" 
+                      duration="3000"
+                      position="bottom"
+                      position-anchor="footer"
+                      >
+                      <!--using position anchor footer, then giving the bottom tab toolbar the id of footer anchors the toast to appear
+                      directly above the footer instead of layering on top of it.-->
+                    </ion-toast>
+                    </div>
+      
+                    <!--list-->
+      
+                    <!--adding lines="full" sets them to full width.-->
+                    <ion-list lines="full">
+
+                        <ion-reorder-group disabled="false">
+                            <ion-item>
+                              <!--Adding slot="start" puts the label text close to the checkbox, and label placement end puts 
+                              the label text after the checkbox instead of the checkbox first.-->
+                                <ion-checkbox label-placement="end" slot="start">Buy groceries</ion-checkbox>
+                                <ion-reorder slot="end"></ion-reorder>
+                            </ion-item>
+                           
+                            <ion-item>
+                              <ion-checkbox label-placement="end" slot="start">Look for study spots</ion-checkbox>
+                              <ion-reorder slot="end"></ion-reorder>
+                            </ion-item>
+
+                            <ion-item>
+                              <ion-checkbox label-placement="end" slot="start">Finish dissertation</ion-checkbox>
+                              <ion-reorder slot="end"></ion-reorder>
+                            </ion-item>
+
+                            <ion-item>
+                              <ion-label slot="start">
+                              <ion-checkbox label-placement="end" >Return shoes to clothing store</ion-checkbox>
+                            </ion-label>
+                              <ion-reorder slot="end"></ion-reorder>
+                            </ion-item>
+
+                       
+                   
+                      </ion-reorder-group>
+                    </ion-list>
+                    
+                  </div>
+                  </ion-content>
+          
+              </div>
+            </ion-tab>
+
+
+            <!---------TAB 2-------->
+            <ion-tab tab="lists">
+              <ion-nav id="lists-nav"></ion-nav>
+              <div id="lists-page">
+    
+                <ion-content class="ion-padding">
+                  <div class="example-content">Lists content</div>
+                </ion-content>
+              </div>
+            </ion-tab>
+
+            <!--------tab 3------->
+            <ion-tab tab="settings">
+              <ion-nav id="settings-nav"></ion-nav>
+              <div id="settings-page">
+                
+                <ion-content class="ion-padding">
+                  <div class="example-content">Settings content</div>
+                </ion-content>
+              </div>
+            </ion-tab>
+            
+
+
+
+            <!---TAB BAR AT BOTTOM OF SCREEN -->
+            <ion-tab-bar id="footer" class="btm-tab" slot="bottom" color="primary" >
+              <ion-tab-button tab="home">
+                <ion-icon name="home"></ion-icon>
+                Home
+              </ion-tab-button>
+
+              <ion-tab-button tab="lists">
+                <ion-icon name="list"></ion-icon>
+                Lists
+              </ion-tab-button>
+           
+              <ion-tab-button tab="settings">
+                <ion-icon name="settings"></ion-icon>
+                Settings
+              </ion-tab-button>
+            </ion-tab-bar>
+          </ion-tabs>
+    
+
+      </div>
+
       <script>
         const homeNav = document.querySelector('#home-nav');
         const homePage = document.querySelector('#home-page');
         homeNav.root = homePage;
       
-        const radioNav = document.querySelector('#radio-nav');
-        const radioPage = document.querySelector('#radio-page');
-        radioNav.root = radioPage;
+        const listsNav = document.querySelector('#lists-nav');
+        const listsPage = document.querySelector('#lists-page');
+        listsNav.root = listsPage;
       
-        const searchNav = document.querySelector('#search-nav');
-        const searchPage = document.querySelector('#search-page');
-        searchNav.root = searchPage;
+        const settingsNav = document.querySelector('#settings-nav');
+        const settingsPage = document.querySelector('#settings-page');
+        settingsNav.root = settingsPage;
+
+
+        
+        /*---redorder list items api------*/
+        /*--https://ionicframework.com/docs/api/reorder */
+
+        const reorderGroup = document.querySelector('ion-reorder-group');
+
+    reorderGroup.addEventListener('ionItemReorder', ({ detail }) => {
+    // The `from` and `to` properties contain the index of the item
+    // when the drag started and ended, respectively
+    console.log('Dragged from index', detail.from, 'to', detail.to);
+
+    // Finish the reorder and position the item in the DOM based on
+    // where the gesture ended. This method can also be called directly
+    // by the reorder group
+    detail.complete();
+  });
+      
       </script>
 </body>
 </html>
