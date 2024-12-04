@@ -1,0 +1,4 @@
+ion-checkbox.checkbox-checked {
+    text-decoration: line-through;
+    opacity: .5
+}
